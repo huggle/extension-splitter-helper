@@ -1,6 +1,6 @@
 TEMPLATE = lib
 TARGET = sh
-QT += declarative core
+QT += declarative core xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,7 +16,7 @@ SOURCES += \
     sh.cpp
 
 HEADERS += \
-    sh.h
+    sh.hpp
 
 #OTHER_FILES = qmldir
 

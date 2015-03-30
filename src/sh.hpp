@@ -39,8 +39,10 @@ class huggle_splitter : public QDeclarativeItem, public Huggle::iExtension
         bool IsWorking();
         QString GetExtensionName() { return "Splitter"; }
         QString GetExtensionAuthor() { return "Petr Bena"; }
-        QString GetExtensionDescription() { return "Splits a diff into new text and old text"; }
+        QString GetExtensionDescription() { return "Splits a html diff into new text and old text"; }
         QString GetExtensionVersion() { return "1.0.0"; }
+        bool Hook_EditBeforeScore(void *edit);
+        void Hook_Shutdown();
         bool RequestCore() { return true; }
         bool RequestNetwork() { return true; }
         bool RequestConfiguration() { return true; }

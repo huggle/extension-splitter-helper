@@ -76,7 +76,7 @@ bool huggle_splitter::Hook_EditBeforeScore(void *edit)
 {
     // this function takes the horrid html diff as provided by mediawiki and split it into new and old text
     WikiEdit *e = (WikiEdit*)edit;
-    if (e->IsSplit)
+    if (e->DiffText_IsSplit)
         return true;
     QDomDocument page;
     QString xml = "<diff>" + e->DiffText + "</diff>";
@@ -121,7 +121,7 @@ bool huggle_splitter::Hook_EditBeforeScore(void *edit)
         return true;
     }
     e->DiffText_Old = text_old;
-    e->IsSplit = true;
+    e->DiffText_IsSplit = true;
     e->DiffText_New = text_new;
     splitter_hits++;
     return true;

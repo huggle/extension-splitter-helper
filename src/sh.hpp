@@ -14,7 +14,6 @@
 #define HUGGLE_EXTENSION
 #include <iextension.hpp>
 #include <QAction>
-#include <QDeclarativeItem>
 
 namespace Huggle
 {
@@ -23,7 +22,7 @@ namespace Huggle
     class WikiSite;
 }
 
-class huggle_splitter : public QDeclarativeItem, public Huggle::iExtension
+class huggle_splitter : public QObject, public Huggle::iExtension
 {
     Q_OBJECT
 #if QT_VERSION >= 0x050000
@@ -48,7 +47,5 @@ class huggle_splitter : public QDeclarativeItem, public Huggle::iExtension
         bool RequestConfiguration() { return true; }
     private:
 };
-
-QML_DECLARE_TYPE(huggle_splitter)
 
 #endif // THANKS_H

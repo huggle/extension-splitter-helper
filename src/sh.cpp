@@ -9,11 +9,11 @@
 //GNU General Public License for more details.
 
 #include "sh.hpp"
-#include <core.hpp>
-#include <wikiedit.hpp>
-#include <wikisite.hpp>
-#include <wikipage.hpp>
-#include <syslog.hpp>
+#include <huggle_core/core.hpp>
+#include <huggle_core/wikiedit.hpp>
+#include <huggle_core/wikisite.hpp>
+#include <huggle_core/wikipage.hpp>
+#include <huggle_core/syslog.hpp>
 #include <QtXml>
 
 using namespace Huggle;

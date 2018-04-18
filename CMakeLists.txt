@@ -41,7 +41,7 @@ file (GLOB sh_uixx
 )
 
 SET(sh_SOURCES ${sh_srcx})
-SET(sh_FORMS ${sh_uixx} "../../mainwindow.ui")
+SET(sh_FORMS ${sh_uixx})
 SET(sh_RESOURCES ${sh_resx})
 if(QT5_BUILD)
     QT5_WRAP_CPP(sh_HEADERS_MOC ${sh_HEADERS})

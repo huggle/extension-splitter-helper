@@ -61,7 +61,7 @@ ADD_LIBRARY(huggle_sh SHARED ${sh_SOURCES} ${sh_HEADERS_MOC} ${sh_FORMS_HEADERS}
 TARGET_LINK_LIBRARIES(huggle_sh ${QT_LIBRARIES})
 TARGET_LINK_LIBRARIES(huggle_sh huggle_core)
 if (QT5_BUILD)
-    qt5_use_modules(huggle_sh Core Gui Widgets Xml)
+    target_link_libraries(huggle_sh Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Xml)
 endif()
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
 if (LINUX_SNAP)
